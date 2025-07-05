@@ -1,12 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD131</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WDD 131  Dynamic Web Fundamentals  Joel kasirivu</title>
+  <meta name="description" content="WDD 131  Dynamic Web Fundamentals | Joel kasirivu | Home page with dynamic content, styling, and structure">
+  <meta name="author" content="Joel">
+  <link rel="stylesheet" href="styles/base.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Montserrat:wght@500&display=swap" rel="stylesheet">
+  <script src="scripts/getdates.js" defer></script>
 </head>
 <body>
-    <h1>Welcome to WDD131</h1>
-    <p>This is a simple HTML page for the WDD131 course.</p>
+  <header>
+    <span id="course-title">WDD 131  Dynamic Web Fundamentals</span>
+    <nav>
+      <a href="https://www.linkedin.com">LinkedIn</a>
+      <a href="https://byupw.instructure.com/">Canvas</a>
+      <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/3?lang=eng&id=p7#p7">Scripture</a>
+      <a href="#">Final Project</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Joel kasirivu</h1>
+    <section class="card">
+      <h2>About Me</h2>
+      <img src="./images/myimage.jpg" alt="Joel photo" />
+      <p>My name is Joel Kasirivu and Im a passionate learner exploring web development and mindfulness. Welcome to my course hub!</p>
+      <p>I live in Kampala , Uganda. I am 39 years old, married with two children. I live a quite life, I love sawing and making diy furniture.</p>
+    </section>
+    <section class="card">
+      <h2>Course Goals</h2>
+      <img src="./images/academicsprogress.jpg" alt="Goals visual" />
+      <p>My goals are to sharpen my HTML, CSS, and JavaScript skills and create meaningful web experiences.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="currentyear"></span> Joel kasirivu, Uganda</p>
+    <p id="lastModified"></p>
+  </footer>
 </body>
 </html>
