@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Temple Album</title>
+  <meta name="author" content="Joel" />
+  <meta name="description" content="Responsive temple album page" />
+  <link rel="stylesheet" href="styles/temples.css" />
+  <link rel="stylesheet" href="styles/temples-large.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet" />
+  <script src="scripts/temples.js" defer></script>
+</head>
+<body>
+  <header>
+    <h2>Temple Album</h2>
+    <button id="menu-button" aria-label="Toggle Menu">☰</button>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Old</a>
+      <a href="#">New</a>
+      <a href="#">Large</a>
+      <a href="#">Small</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>My Favorite Temples</h1>
+    <section class="gallery">
+      <!-- Repeat as needed -->
+      <figure>
+        <img src="./images/temple1.webp" alt="Temple 1">
+        <figcaption>Temple 1</figcaption>
+      </figure>
+      <figure>
+        <img src="./images/temple1.webp" alt="Temple 2">
+        <figcaption>Temple 2</figcaption>
+      </figure>
+      <figure>
+        <img src="./images/temple1.webp" alt="Temple 3">
+        <figcaption>Temple 3</figcaption>
+      </figure>
+      <figure>
+        <img src="./images/temple1.webp" alt="Temple 4">
+        <figcaption>Temple 1</figcaption>
+      </figure>
+      <figure>
+        <img src="./images/temple1.webp" alt="Temple 5">
+        <figcaption>Temple 1</figcaption>
+      </figure>
+      <figure>
+        <img src="./images/temple1.webp" alt="Temple 6">
+        <figcaption>Temple 1</figcaption>
+      </figure>
+      
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Kasirivu Joel | Last Modified: <span id="lastModified"></span></p>
+  </footer>
+</body>
+</html>
