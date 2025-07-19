@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Discover Uganda</title>
+
+  <!-- Link to external CSS -->
+  <link rel="stylesheet" href="styles/place.css" />
+
+  <!-- Link to external JS with defer to prevent blocking -->
+  <script src="scripts/place.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Discover Uganda</h1>
+  </header>
+
+  <!-- Responsive Hero Section Using Picture Element -->
+  <div class="hero">
+    <picture>
+      <source srcset=".\images\murchision-falls-uganda.webp" media="(min-width: 1000px)" />
+      <source srcset=".\images\murchision-falls-uganda.webp" media="(min-width: 500px)" />
+      <img srcset=".\images\murchision-falls-uganda.webp" alt="Scenic view of Uganda" width="1500" height="750" />
+    </picture>
+  </div>
+
+  <main>
+    <h2>Explore the Pearl of Africa</h2>
+
+    <section class="weather">
+      <h3>Weather</h3>
+      <!-- SVG weather icon for mobile view -->
+      <img src="./images/icon.svg" alt="Weather icon - partly cloudy" width="48" height="48" />
+      <p>Temperature: 45°F</p>
+      <p>Wind Speed: 5 mph</p>
+      <p>Wind Chill: <span id="windChill">Loading...</span></p>
+    </section>
+
+    <section class="attractions">
+      <h3>Top Destinations</h3>
+      <ul>
+        <li>Kampala</li>
+        <li>Murchison Falls</li>
+        <li>Lake Victoria</li>
+      </ul>
+    </section>
+
+    <section class="culture">
+      <h3>Culture</h3>
+      <p>Uganda is home to vibrant music, colorful clothing, and rich traditions across over 50 ethnic groups.</p>
+    </section>
+  </main>
+
+  <!-- Footer populated by JavaScript -->
+  <footer>
+    <p>&copy; <span id="year"></span> Discover Uganda</p>
+    <p>Last updated: <span id="lastModified"></span></p>
+  </footer>
+</body>
+</html>

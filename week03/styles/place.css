@@ -1,0 +1,72 @@
+/* ========== Global Variables ========== */
+:root {
+  --main-bg: #fdfdfd;
+  --accent: #20603d;
+  --text: #333;
+  --border: 1px solid #777;
+  --font-stack: 'Segoe UI', sans-serif;
+}
+
+/* ========== Base Styles ========== */
+body {
+  font-family: var(--font-stack);
+  margin: 0;
+  background-color: var(--main-bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+header {
+  background-color: var(--accent);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+.hero img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ========== Layout: Mobile First ========== */
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+main h2 {
+  font-size: 1.8rem;
+  color: var(--accent);
+}
+
+/* Weather heading will gain icon in large view */
+.weather h3::after {
+  content: "";
+}
+
+/* ========== Footer ========== */
+footer {
+  background-color: var(--accent);
+  color: whitesmoke;
+  padding: 1rem;
+}
+
+/* ========== Layout: Large Viewport Enhancements ========== */
+@media screen and (min-width: 700px) {
+  main {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  main h2 {
+    grid-column: span 2;
+    text-align: left;
+  }
+
+  .weather h3::after {
+    content: " ⛅"; /* Emoticon icon for wide view */
+    margin-left: 0.5rem;
+  }
+}
