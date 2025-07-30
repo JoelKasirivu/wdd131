@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Filtered Temples</title>
+  <link rel="stylesheet" href="styles/filtered-temples.css" />
+</head>
+<body>
+  <header>
+    <h1>Temple Picture Album</h1>
+    <!-- Navigation buttons for filtering -->
+    <nav>
+      <button onclick="filterTemples('home')">Home</button>
+      <button onclick="filterTemples('old')">Old</button>
+      <button onclick="filterTemples('new')">New</button>
+      <button onclick="filterTemples('large')">Large</button>
+      <button onclick="filterTemples('small')">Small</button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Container for dynamically generated temple cards -->
+    <div id="templeCards"></div>
+  </main>
+
+
+  <footer>
+    <!-- Dynamic year and last modified date -->
+    <p>&copy; <span id="year"></span> Joel Kasirivu</p>
+    <p>Last Modified: <span id="lastModified"></span></p>
+  </footer>
+
+  <script src="scripts/filtered-temples.js"></script>
+</body>
+</html>
