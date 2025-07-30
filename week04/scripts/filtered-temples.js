@@ -49,27 +49,27 @@ area: 9600,
     area: 116642,
     imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
   },
-  // NEW: Additional temples
+//  Additional temples
   {
     templeName: "Accra Ghana",
     location: "Accra, Ghana",
     dedicated: "2004, January, 11",
     area: 17000,
-    imageUrl: "https://example.com/accra-temple.jpg"
+        imageUrl: "https://th.bing.com/th/id/OIP.eNzgwGyfnf8RIlGpfCoXBgHaE8?w=261&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3"
   },
 {
     templeName: "Rome Italy",
     location: "Rome, Italy",
     dedicated: "2019, March, 10",
     area: 40000,
-    imageUrl: "https://example.com/rome-temple.jpg"
+    imageUrl: "https://th.bing.com/th/id/OIP.aC5JX0MRC7fLBNChKU6uNgHaHW?w=199&h=197&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3"
   },
   {
-    templeName: "Kampala Uganda",
-    location: "Kampala, Uganda",
+    templeName: "South Africa Johannesburg",
+    location: "Johannesburg, SouthAfrica",
     dedicated: "2025, March, 15",
     area: 12000,
-    imageUrl: "https://example.com/kampala-temple.jpg"
+    imageUrl: "https://th.bing.com/th/id/OIP.u73T24-7UVhB0cc75cbipQHaHW?w=185&h=184&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3"
   }
 ];
 
