@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product Review Form</title>
+  <link rel="stylesheet" href="styles/form.css" />
+</head>
+<body>
+  <main>
+    <h1>Product Review Form</h1>
+    <form method="get" action="review.html">
+      <label for="product">Product Name<span>*</span></label>
+      <select id="product" name="product" required>
+        <option value="" disabled selected>Select a Product ...</option>
+      </select>
+
+      <fieldset>
+        <legend>Overall Rating<span>*</span></legend>
+        <div class="stars">
+          <label><input type="radio" name="rating" id="rate1" value="1" required />☆</label>
+          <label><input type="radio" name="rating" id="rate2" value="2" />☆☆</label>
+          <label><input type="radio" name="rating" id="rate3" value="3" />☆☆☆</label>
+          <label><input type="radio" name="rating" id="rate4" value="4" />☆☆☆☆</label>
+          <label><input type="radio" name="rating" id="rate5" value="5" />☆☆☆☆☆</label>
+        </div>
+      </fieldset>
+
+      <label for="install-date">Date of Installation<span>*</span></label>
+      <input type="date" id="install-date" name="install-date" required />
+
+      <fieldset>
+        <legend>Useful Features</legend>
+        <label><input type="checkbox" id="feature1" name="features" value="durability" />Durability</label>
+        <label><input type="checkbox" id="feature2" name="features" value="efficiency" />Efficiency</label>
+        <label><input type="checkbox" id="feature3" name="features" value="design" />Design</label>
+      </fieldset>
+
+      <label for="review">Written Review</label>
+      <textarea id="review" name="review" rows="4" cols="50"></textarea>
+
+      <label for="username">Your Name</label>
+      <input type="text" id="username" name="username" />
+
+      <input type="submit" value="Submit Review" />
+    </form>
+  </main>
+
+  <footer>
+    <p>© Brigham Young University-Idaho | All rights reserved</p>
+  </footer>
+
+  <script src="scripts/form.js"></script>
+</body>
+</html>
