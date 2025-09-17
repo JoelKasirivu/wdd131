@@ -1,0 +1,41 @@
+@media (min-width: 740px) {
+  header {
+    display: flex;
+    justify-content: space-around;
+
+  }
+
+  nav ul {
+    display: flex;
+    
+
+
+  }
+
+  nav a {
+    flex: 1 1 100%;
+  }
+
+  nav ul li {
+    flex: 1 1 100%;
+    
+
+    
+  }
+
+  #mainnav {
+    display: flex;
+    justify-content: space-around;
+
+
+  }
+
+
+  #hamburgerBtn {
+    display: none;
+  }
+
+  .album {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
