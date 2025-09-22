@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Discover Uganda</title>
+  <link rel="stylesheet" href="../wdd131/styles/place.css" />
+  <script src="../wdd131/scripts/place.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Discover Uganda</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Culture</a></li>
+        <li><a href="#">Nature</a></li>
+        <li><a href="#">Weather</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <picture>
+        <source srcset="../wdd131/images/uganda-hero.webp" media="(max-width: 600px)" />
+        <source srcset="../wdd131/images/uganda-hero.webp" media="(max-width: 1024px)" />
+        <img src="../wdd131/images/uganda-hero.webp" alt="The pearl of Africa" />
+      </picture>
+    </section>
+
+    <section class="weather">
+      <h2>Weather <span class="weather-icon" aria-hidden="true"></span></h2>
+      <div class="weather-details">
+        <p>Temperature: <span id="temp">28</span>°C</p>
+        <p>Wind Speed: <span id="speed">10</span> km/h</p>
+        <p>Wind Chill: <span id="windchill">Calculating...</span></p>
+        <img src="../wdd131/images/sun-icon.svg" alt="Sunny weather icon" class="mobile-icon" />
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> | Last Modified: <span id="lastModified"></span></p>
+  </footer>
+</body>
+</html>
