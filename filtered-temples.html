@@ -8,20 +8,24 @@
 </head>
 <body>
   <header>
-    <h1>Temple Picture Album</h1>
+    <h1>Temple Gallery</h1>
     <nav>
-      <button data-filter="old">Old</button>
-      <button data-filter="new">New</button>
-      <button data-filter="large">Large</button>
-      <button data-filter="small">Small</button>
-      <button data-filter="home">Home</button>
+      <ul>
+        <li><a href="#" data-filter="home">Home</a></li>
+        <li><a href="#" data-filter="old">Old</a></li>
+        <li><a href="#" data-filter="new">New</a></li>
+        <li><a href="#" data-filter="large">Large</a></li>
+        <li><a href="#" data-filter="small">Small</a></li>
+      </ul>
     </nav>
   </header>
 
-  <main id="temple-cards"></main>
+  <main>
+    <div id="templeCards" class="card-container"></div>
+  </main>
 
   <footer>
-    <p>&copy; <span id="year"></span> | Last Modified: <span id="modified"></span> | Joel Kasirivu</p>
+    <p>&copy; <span id="year"></span> | Last Modified: <span id="lastModified"></span> | Joel Kasirivu</p>
   </footer>
 
   <script src="scripts/filtered-temples.js"></script>

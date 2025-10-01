@@ -4,35 +4,13 @@ const temples = [
     location: "Salt Lake City, Utah",
     dedicated: "1893-04-06",
     area: 253015,
-    imageUrl: "./images/img-temple.jpeg"
+    imageUrl: "./images/img-temple.jpeg "
   },
   {
-    name: "Nauvoo Temple",
-    location: "Nauvoo, Illinois",
-    dedicated: "1846-04-30",
-    area: 54000,
-    imageUrl: "./images/img-temple.jpeg"
-  },
-  {
-    name: "Accra Ghana Temple",
-    location: "Accra, Ghana",
-    dedicated: "2004-01-11",
-    area: 17000,
-    imageUrl: "./images/img-temple.jpeg"
-  },
-  
-  {
-    name: "Kampala Uganda Temple",
-    location: "Kampala, Uganda",
-    dedicated: "2025-06-01",
-    area: 15000,
-    imageUrl: "./images/img-temple.jpeg"
-  },
-  {
-    name: "Paris France Temple",
-    location: "Paris, France",
-    dedicated: "2017-05-21",
-    area: 44000,
+    name: "Rome Italy Temple",
+    location: "Rome, Italy",
+    dedicated: "2019-03-10",
+    area: 40000,
     imageUrl: "./images/img-temple.jpeg"
   },
   {
@@ -43,57 +21,67 @@ const temples = [
     imageUrl: "./images/img-temple.jpeg"
   },
   {
-    name: "Provo City Center Temple",
-    location: "Provo, Utah",
-    dedicated: "2016-03-20",
-    area: 56000,
+    name: "Paris France Temple",
+    location: "Le Chesnay, France",
+    dedicated: "2017-05-21",
+    area: 44000,
     imageUrl: "./images/img-temple.jpeg"
   },
   {
-    name: "Rome Italy Temple",
-    location: "Rome, Italy",
-    dedicated: "2019-03-10",
-    area: 70000,
+    name: "Tokyo Japan Temple",
+    location: "Tokyo, Japan",
+    dedicated: "1980-10-27",
+    area: 52000,
     imageUrl: "./images/img-temple.jpeg"
   },
   {
-    name: "Columbus Ohio Temple",
-    location: "Columbus, Ohio",
-    dedicated: "2022-09-18",
-    area: 9000,
+    name: "Kinshasa DR Congo Temple",
+    location: "Kinshasa, DR Congo",
+    dedicated: "2019-04-14",
+    area: 10000,
     imageUrl: "./images/img-temple.jpeg"
   },
-  {
-    name: "Cedar City Utah Temple",
-    location: "Cedar City, Utah", 
-    dedicated: "2017-03-26",
-    area: 9700,
+{
+    name: "New Temple",
+    location: "New Location",
+    dedicated: "2023-01-01",
+    area: 30000,
+    imageUrl: "./images/img-temple.jpeg"
+  },
+{    name: "Small Temple",
+    location: "Small Location",
+    dedicated: "1950-05-15",
+    area: 8000,
+    imageUrl: "./images/img-temple.jpeg"
+  },
+{    name: "Ancient Temple",
+    location: "Ancient Location",
+    dedicated: "1850-07-20",
+    area: 12000,
     imageUrl: "./images/img-temple.jpeg"
   }
 ];
 
-const container = document.getElementById("temple-cards");
-
-function renderTemples(list) {
+function displayTemples(templesArray) {
+  const container = document.getElementById("templeCards");
   container.innerHTML = "";
-  list.forEach(temple => {
-    const card = document.createElement("div");
-    card.className = "card";
+
+  templesArray.forEach(temple => {
+    const card = document.createElement("section");
     card.innerHTML = `
-      <img src="${temple.imageUrl}" alt="${temple.name}" loading="lazy" />
-      <div class="card-content">
-        <h2>${temple.name}</h2>
-        <p><strong>Location:</strong> ${temple.location}</p>
-        <p><strong>Dedicated:</strong> ${temple.dedicated}</p>
-        <p><strong>Area:</strong> ${temple.area.toLocaleString()} sq ft</p>
-      </div>
+      <h2>${temple.name}</h2>
+      <p><strong>Location:</strong> ${temple.location}</p>
+      <p><strong>Dedicated:</strong> ${temple.dedicated}</p>
+      <p><strong>Area:</strong> ${temple.area.toLocaleString()} sq ft</p>
+      <img src="${temple.imageUrl}" alt="${temple.name}" loading="lazy">
     `;
     container.appendChild(card);
   });
 }
 
 function filterTemples(criteria) {
-  let filtered;
+  let filtered = [];
+
   switch (criteria) {
     case "old":
       filtered = temples.filter(t => new Date(t.dedicated).getFullYear() < 1900);
@@ -110,16 +98,21 @@ function filterTemples(criteria) {
     default:
       filtered = temples;
   }
-  renderTemples(filtered);
+
+  displayTemples(filtered);
 }
 
-document.querySelectorAll("nav button").forEach(btn => {
-  btn.addEventListener("click", () => {
-    filterTemples(btn.dataset.filter);
+document.querySelectorAll("nav a").forEach(link => {
+  link.addEventListener("click", e => {
+    e.preventDefault();
+    const filter = e.target.dataset.filter;
+    filterTemples(filter);
   });
 });
 
 document.getElementById("year").textContent = new Date().getFullYear();
-document.getElementById("modified").textContent = document.lastModified;
+document.getElementById("lastModified").textContent = document.lastModified;
 
-renderTemples(temples);
+// Initial display
+displayTemples(temples);
+filterTemples("all");
