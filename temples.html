@@ -4,74 +4,84 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Temple Album</title>
-  <link rel="stylesheet" href="styles/temples.css" />
-  <link rel="stylesheet" href="styles/temples-larger.css" />
+
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
-  <script src="scripts/temples.js" defer></script>
+
+  <!-- Mobile-first CSS first -->
+  <link rel="stylesheet" href="./styles/temples.css" />
+  <link rel="stylesheet" href="./styles/temples-lager.css" media="screen and (min-width: 640px)" />
+
+  <!-- JavaScript -->
+  <script src="./scripts/temples.js" defer></script>
 </head>
 <body>
   <header>
     <h1>Temple Album</h1>
-    <button id="hamburgerBtn">☰</button>
-    <nav>
-        <ul>
-            <li><a href="#" class="active">Home</a></li>
-            <li><a href="#" class="active">Old</a></li>
-            <li><a href="#" class="active">New</a></li>
-            <li><a href="#" class="active">Large</a></li>
-            <li><a href="#" class="active">Small</a></li>
-        </ul>
-   
+    <button id="menuBtn">☰</button>
+    <nav id="navMenu">
+      <a href="#">Home</a>
+      <a href="#">Old</a>
+      <a href="#">New</a>
+      <a href="#">Large</a>
+      <a href="#">Small</a>
     </nav>
   </header>
 
   <main>
-    
-    <section>
-        <h1 class="album">Temples Around the World</h1>
-        <div class="container album">
-      <!-- Placeholder temple images -->
-            <figure>
-                <img class="hover" src="images/img-temple.jpeg" alt="Salt Lake Temple" />
-                <figcaption>:hover pseudo-class | box-shadow</figcaption>
-            </figure>
-            <figure>
-                <img class="rocorn" src="images/img-temple.jpeg" alt="Tokyo Temple" />
-                <figcaption>border-radius (15px 150px)</figcaption>
-            </figure>
-            <figure>
-                <img class="opac" src="images/img-temple.jpeg" alt="Accra Temple" />
-                <figcaption>opacity (1.5)</figcaption>
-            </figure>
-            <figure>
-                <img class="blur" src="images/img-temple.jpeg" alt="Paris Temple" />
-                <figcaption>filter: blur at 4px Paris Temple</figcaption>
-            </figure>
-            <figure>
-                <img class="gray" src="images/img-temple.jpeg" alt="Rome Temple" />
-                <figcaption>filter: blur (1px) and grayscale (50%)</figcaption>
-            </figure>
-            <figure>
-                <img class="object" src="images/img-temple.jpeg" alt="Mexico City Temple" />
-                <figcaption>object-fit<br><br>⚙️ <a href="https://youtu.be/5CZyxnCdXuk" target="_blank">More on Object Fit from Layout Land</a></figcaption>
-            </figure>
-            <figure>
-                <img class="contrast" src="images/img-temple.jpeg" alt="Hong Kong Temple" />
-                <figcaption>filter: contrast (50%)Hong Kong Temple</figcaption>
-            </figure>
-            <figure>
-                <img class="saturate" src="images/img-temple.jpeg" alt="Johannesburg Temple" />
-                <figcaption>filter: saturete(50%)Johannesburg Temple</figcaption>
-            </figure>
-            <figure>
-                <img class="shape-outside" src="images/img-temple.jpeg" alt="Sydney Temple" />
-                <figcaption>Shape-Outside (shape-outside: circle();) is applied with a border-radius and a reduced width. The shape-outside property may not be supported in your browser. Consult <a href="https://caniuse.com/#search=shape-outside" target="_blank">CanIUse</a> to check the support status of this css property.</figcaption>
-            </figure>
+    <h1>Temples Around the World</h1>
+    <section class="container">
+      <!-- Repeat this figure 9 times -->
+      <figure>
+        <img src="./images/img-temple.jpeg" alt="Temple Name" />
+        <figcaption>Temple Name</figcaption>
+      </figure>
+      <figure>
+        <img src="./images/img-temple.jpeg" alt="Temple Name" />
+        <figcaption>Temple Name</figcaption>
+      </figure>
+      <figure>
+        <img src="./images/img-temple.jpeg" alt="Temple Name" />
+        <figcaption>Temple Name</figcaption>
+      </figure>
+      <figure>
+        <img src="./images/img-temple.jpeg" alt="Temple Name" />
+        <figcaption>Temple Name</figcaption>
+      </figure>
+      <figure>
+        <img src="./images/img-temple.jpeg" alt="Temple Name" />
+        <figcaption>Temple Name</figcaption>
+      </figure>
+      <figure>
+        <img src="./images/img-temple.jpeg" alt="Temple Name" />
+        <figcaption>Temple Name</figcaption>
+      </figure>
+      <figure>
+        <img src="./images/img-temple.jpeg" alt="Temple Name" />
+        <figcaption>Temple Name</figcaption>
+      </figure>
+      <figure>
+        <img src="./images/img-temple.jpeg" alt="Temple Name" />
+        <figcaption>Temple Name</figcaption>
+      </figure>
+      <figure>
+        <img src="./images/img-temple.jpeg" alt="Temple Name" />
+        <figcaption>Temple Name</figcaption>
+      </figure>
+      <figure>
+        <img src="./images/img-temple.jpeg" alt="Temple Name" />
+        <figcaption>Temple Name</figcaption>
+      </figure>
+      <figure>
+        <img src="./images/img-temple.jpeg" alt="Temple Name" />
+        <figcaption>Temple Name</figcaption>
+      </figure>
     </section>
   </main>
 
   <footer>
-    <p>&copy; <span id="year"></span> | Last Modified: <span id="lastModified"></span></p>
+    <p>&copy; <span id="year"></span> Joel Kasirivu</p>
+    <p>Last Modified: <span id="lastModified"></span></p>
   </footer>
 </body>
 </html>
