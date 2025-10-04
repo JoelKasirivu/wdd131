@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Review Confirmation</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <main>
+    <h1>Thank You for Your Review!</h1>
+    <p>You have submitted <span id="counter">0</span> reviews.</p>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Joel Kasirivu. All rights reserved.</p>
+  </footer>
+
+  <script>
+    let count = localStorage.getItem("reviewCount") || 0;
+    count++;
+    localStorage.setItem("reviewCount", count);
+    document.getElementById("counter").textContent = count;
+  </script>
+</body>
+</html>
