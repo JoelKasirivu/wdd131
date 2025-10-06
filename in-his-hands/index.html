@@ -3,15 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="In His Hands Foundation - Serving vulnerable children and communities through Christ-centered outreach." />
+  <meta name="description" content="In His Hands Foundation - uplifting communities through education, healthcare, and outreach." />
   <title>In His Hands Foundation</title>
   <link rel="stylesheet" href="../in-his-hands/styles/style.css" />
 </head>
 <body>
   <header>
+    <h1>In His Hands Foundation</h1>
     <nav>
-      <button class="menu-toggle" aria-label="Toggle menu">☰</button>
-      <ul class="menu-items">
+      <button id="menu-toggle">☰</button>
+      <ul id="menu">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="projects.html">Projects</a></li>
@@ -19,19 +20,23 @@
         <li><a href="references.html">References</a></li>
       </ul>
     </nav>
-    <img src="images/logo.webp" alt="Foundation Logo" loading="lazy" width="100" />
   </header>
 
   <main>
-    <h1>Welcome to In His Hands Foundation</h1>
-    <p>We serve as His hands here on earth, sharing the heart of Christ with the unloved, unwanted, and forgotten.</p>
-    <img src="images/team.webp" alt="Team serving community" loading="lazy" width="100%" />
+    <section>
+      <h2>Welcome</h2>
+      <p>Empowering lives through compassion and action.</p>
+      <p id="impactCounter">Lives impacted: 0</p>
+    </section>
+    <img src="../in-his-hands/images/hero-image.png" alt="Community outreach" loading="lazy" />
   </main>
 
   <footer>
-  <p>&copy; <span id="year"></span> In His Hands Foundation — <span id="date"></span></p>
-</footer>
+    <p>&copy; <span id="year"></span> In His Hands Foundation</p>
+    <p>Last updated: <span id="lastModified"></span></p>
+    <p>Created by Joel Kasirivu 😊</p>
+  </footer>
 
-  <script src="../in-his-hands/scripts/script.js" defer></script>
+  <script src="../in-his-hands/scripts/script.js"></script>
 </body>
 </html>

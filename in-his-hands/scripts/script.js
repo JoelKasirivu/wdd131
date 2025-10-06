@@ -1,51 +1,113 @@
-document.addEventListener("DOMContentLoaded", () => {
-  // Existing menu toggle and other logic...
+// Footer Dates
+document.getElementById("year").textContent = `${new Date().getFullYear()}`;
+document.getElementById("lastModified").textContent = `${document.lastModified}`;
 
-  // Set current year
-  const yearSpan = document.getElementById("year");
-  const currentYear = new Date().getFullYear();
-  if (yearSpan) yearSpan.textContent = currentYear;
+// Impact Counter
+let impactCount = localStorage.getItem("impactCount") || 0;
+impactCount++;
+localStorage.setItem("impactCount", impactCount);
+const impactDisplay = document.getElementById("impactCounter");
+if (impactDisplay) {
+  impactDisplay.textContent = `Lives impacted: ${impactCount}`;
+}
 
-  // Set full current date
-  const dateSpan = document.getElementById("date");
-  const today = new Date();
-  const formattedDate = today.toLocaleDateString("en-UG", {
-    weekday: "long",
-    year: "numeric",
-    month: "long",
-    day: "numeric"
+// Responsive Menu Toggle
+const menuToggle = document.getElementById("menu-toggle");
+const menu = document.getElementById("menu");
+if (menuToggle && menu) {
+  menuToggle.addEventListener("click", () => {
+    menu.classList.toggle("show");
   });
-  if (dateSpan) dateSpan.textContent = formattedDate;
-});
-document.addEventListener("DOMContentLoaded", () => {
-  // DOM Manipulation
-  const toggle = document.querySelector(".menu-toggle");
-  const menu = document.querySelector(".menu-items");
+}
 
-  toggle.addEventListener("click", () => {
-    menu.classList.toggle("active");
-  });
+// Wind Chill Calculation
+function calculateWindChill(temp, speed) {
+  return (
+    35.74 +
+    0.6215 * temp -
+    35.75 * Math.pow(speed, 0.16) +
+    0.4275 * temp * Math.pow(speed, 0.16)
+  );
+}
+const temperature = 45;
+const windSpeed = 10;
+if (temperature <= 50 && windSpeed > 3) {
+  const chill = calculateWindChill(temperature, windSpeed);
+  console.log(`Wind Chill: ${chill.toFixed(1)}°F`);
+}
 
-  // Object
-  const contactInfo = {
-    email: "info@inhishands.org",
-    phone: "+256 700 123456"
-  };
+// Founder Object
+const founder = {
+  name: "Emily",
+  role: "Founder & Director",
+  mission: "Empowering underserved communities through compassion and action."
+};
+console.log(`${founder.name}, ${founder.role}: ${founder.mission}`);
 
-  // Array + Method
-  const pages = ["index", "about", "projects", "contact", "references"];
-  const pageList = pages.map(p => `Page: ${p}.html`);
-
-  // Template Literal
-  console.log(`Welcome to ${contactInfo.email}. Pages: ${pageList.join(", ")}`);
-
-  // Conditional Branching
-  if (pages.length > 4) {
-    console.log("This site has a rich structure.");
+// Projects Array
+const projects = [
+  {
+    title: "Community Literacy Program",
+    category: "education",
+    description: "Providing books and tutoring to children in underserved areas.",
+    image: "../in-his-hands/images/Books-For-Africa.jpg",
+    alt: "Children reading books"
+  },
+  {
+    title: "Mobile Health Clinic",
+    category: "healthcare",
+    description: "Delivering essential medical services to remote villages.",
+    image: "../in-his-hands/images/mobile-clinic.png",
+    alt: "Mobile clinic"
+  },
+  {
+    title: "Youth Empowerment Workshops",
+    category: "outreach",
+    description: "Training young leaders in life skills and civic engagement.",
+    image: "../in-his-hands/images/initiative-photo.png",
+    alt: "Youth participating in a workshop"
   }
+];
 
-  // localStorage
-  let visitCount = localStorage.getItem("visitCount") || 0;
-  visitCount++;
-  localStorage.setItem("visitCount", visitCount);
-});
+// Render Projects
+function renderProjects(filteredProjects) {
+  const container = document.getElementById("projectCards");
+  if (!container) return;
+
+  container.innerHTML = "";
+  filteredProjects.forEach(project => {
+    const card = document.createElement("article");
+    card.innerHTML = `
+      <figure>
+        <img src="${project.image}" alt="${project.alt}" loading="lazy" />
+        <figcaption>${project.title}</figcaption>
+      </figure>
+      <p>${project.description}</p>
+    `;
+    container.appendChild(card);
+  });
+}
+
+// Filter Projects
+function filterProjects(category) {
+  if (category === "all") {
+    renderProjects(projects);
+  } else {
+    const filtered = projects.filter(p => p.category === category);
+    renderProjects(filtered);
+  }
+}
+
+// Initial Load
+if (document.getElementById("projectCards")) {
+  renderProjects(projects);
+}
+
+// Contact Form Feedback
+const contactForm = document.getElementById("contactForm");
+if (contactForm) {
+  contactForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+    alert("Thank you for your message!");
+  });
+}

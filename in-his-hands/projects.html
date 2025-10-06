@@ -3,15 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="In His Hands Foundation - Serving vulnerable children and communities through Christ-centered outreach." />
-  <title>In His Hands Foundation</title>
+  <meta name="description" content="Explore our projects and filter by category." />
+  <title>Projects | In His Hands Foundation</title>
   <link rel="stylesheet" href="../in-his-hands/styles/style.css" />
 </head>
 <body>
   <header>
+    <h1>Our Projects</h1>
     <nav>
-      <button class="menu-toggle" aria-label="Toggle menu">☰</button>
-      <ul class="menu-items">
+      <button id="menu-toggle">☰</button>
+      <ul id="menu">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="projects.html">Projects</a></li>
@@ -19,21 +20,27 @@
         <li><a href="references.html">References</a></li>
       </ul>
     </nav>
-    <img src="images/logo.webp" alt="Foundation Logo" loading="lazy" width="100" />
   </header>
 
-<main>
-  <h1>Our Projects</h1>
-  <section>
-    <h2>Orphan Outreach</h2>
-    <p>We provide shelter, education, and spiritual care to orphaned children.</p>
-    <img src="images/outreach.webp" alt="Outreach program" loading="lazy" />
-  </section>
-</main>
-<footer>
-  <p>&copy; <span id="year"></span> In His Hands Foundation — <span id="date"></span></p>
-</footer>
+  <main>
+    <section>
+      <h2>Filter Projects</h2>
+      <button onclick="filterProjects('education')">Education</button>
+      <button onclick="filterProjects('healthcare')">Healthcare</button>
+      <button onclick="filterProjects('outreach')">Outreach</button>
+      <button onclick="filterProjects('all')">All</button>
+    </section>
 
-  <script src="../in-his-hands/scripts/script.js" defer></script>
+    <section id="projectCards">
+      <!-- JavaScript will dynamically insert project cards here -->
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> In His Hands Foundation</p>
+    <p>Last updated: <span id="lastModified"></span></p>
+  </footer>
+
+  <script src="../in-his-hands/scripts/script.js"></script>
 </body>
 </html>
