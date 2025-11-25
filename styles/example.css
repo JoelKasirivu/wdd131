@@ -1,0 +1,7 @@
+#course-title {
+  display: block;       /* makes it behave like a heading */
+  font-size: 2em;       /* larger text */
+  font-weight: bold;    /* bold text */
+  margin: 20px 0;       /* spacing around */
+  color: #2c3e50;       /* dark gray-blue */
+}

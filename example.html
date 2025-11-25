@@ -4,28 +4,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./styles/example.css">
     <script src="./scripts/example.js" defer></script>
 </head>
 <body>
     <header>
         <h1>WDD131 Dynamic Web Fundamentals - joel Kasirivu</h1>
+        <span id="course-title">WDD 131 - Dynamic Web Fundamentals</span>
     </header>
     <main>
+        
         <nav>
             <a href="https://www.linkedIn.com">LinkedIn</a>
             <a href="https://byupw.instructure.com/">Canvas</a>
             <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/3?lang=eng&id=p7#p7">Scripture</a>
             <a href="#">Final Project</a>
         </nav>
+        <h1>Joel Kasirivu</h1>
+
+        <section class="card">
+            <h2 id="headline_A">Dynamic Web Page Example</h2>
+            <p>This is an example of a dynamic web page using DOM manipulation and BOM features.</p>
+            <a href="https://www.example.com">Visit Example.com</a>
+        </section>
+        <section class="card">
+            <h2 id="headline_B">JavaScript Features</h2>
+            <ul>
+                <li>DOM Manipulation</li>
+                <li>Event Handling</li>
+                <li>BOM Interaction</li>
+            </ul>
+            <a href="https://www.javascript.com">Learn JavaScript</a>
+        </section>
         <div>
             <button id="button_A">Press me</button>
             <h3 id="heading_A"></h3>
+            <p id="output"></p>
         </div>
+        
+        <div id="output">
+            <p><strong>1</strong>: Hello World</p>
+            <p><strong>2</strong>: This is working now!</p>
+            <p><strong>3</strong>: JavaScript is fun!</p>
+            <p><strong>4</strong>: DOM manipulation is powerful!</p>
+            <p><strong>5</strong>: I can change content dynamically!</p>
+            <p><strong>6</strong>: Event listeners respond to user actions!</p>
+        </div>
+
         
     </main>
     <footer>
-        <p>@; <span id="currentYear"> Rubaga, Kampala, Uganda.</span></p>
-        <p>id="lastmodified"</p>
+        <p>&copy; <span id="currentYear"></span>Rubaga, Kampala, Uganda.</p>
+        <p id="lastmodified"></p>
     </footer>
     
 </body>

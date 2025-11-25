@@ -46,12 +46,17 @@ for (const temple of temples) {
 document.querySelector("ul").innerHTML = listItems;
 
 // get current year
-const currentYearSpan = document.ElementById("currentYear");
-const currentYear = new Date().getFullYear();
-currentYearSpan.textContent = currentYear;
+document.getElementById("currentYear").textContent = new Date().getFullYear();
 
 // get last modified date
+const lastModifiedElement = document.getElementById("lastmodified");
+lastModifiedElement.textContent = `Last Modified: ${document.lastModified}`;
 
-const lastModified = document.getElementById("lastmodified");
-lastModified.textContent = `last Modified: ${document.lastmodified}`;
+
+// The function output defined below is used to aid in displaying the results by appending the output paragraph with an id attribute of 'output'
+function output(linenumber, content) {
+  const outputElement = document.querySelector('#output');
+  outputElement.innerHTML += `<p><strong>${linenumber}</strong>:  ${content}</p>`;
+}
+
 
