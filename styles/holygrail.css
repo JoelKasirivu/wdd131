@@ -20,7 +20,7 @@ header, footer {
 
 /* Left Sidebar */
 .left {
-  flex: 1/2;
+  flex: 1;
   background: lightgreen;
   padding: 1rem;
 }
@@ -42,4 +42,33 @@ main {
 /* Footer sticks to bottom */
 footer {
   margin-top: auto;
+}
+
+/* Navigation Styles */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li a {
+    color: chocolate;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    align-items: stretch;
+    text-align: center;
+    
+
+}
+
+nav {
+    background-color: lightgray;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+/* hoover effect for nav links*/
+nav ul li a:hover {
+    background-color: chocolate;
+    color: white;
 }
