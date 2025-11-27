@@ -1,0 +1,45 @@
+/* Reset */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Header & Footer */
+header, footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* Container with 3 columns */
+.container {
+  display: flex;
+  min-height: 70vh; /* ensures space between header & footer */
+}
+
+/* Left Sidebar */
+.left {
+  flex: 1/2;
+  background: lightgreen;
+  padding: 1rem;
+}
+
+/* Main Content */
+main {
+  flex: 2;
+  background: #fff;
+  padding: 1rem;
+}
+
+/* Right Sidebar */
+.right {
+  flex: 1;
+  background: lightblue;
+  padding: 1rem;
+}
+
+/* Footer sticks to bottom */
+footer {
+  margin-top: auto;
+}

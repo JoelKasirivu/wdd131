@@ -1,0 +1,18 @@
+@media (max-width: 600px) {
+    body {
+        background-color: lightgreen;
+        font-size: 18px;
+        line-height: 1.6;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    
+}
