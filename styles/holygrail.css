@@ -72,3 +72,56 @@ nav ul li a:hover {
     background-color: chocolate;
     color: white;
 }
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #333;
+  padding: 1rem;
+  color: white;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+}
+
+.hamburger {
+  display: none; /* hidden on desktop */
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block; /* show hamburger */
+  }
+
+  .nav-links {
+    display: none; /* hide links initially */
+    flex-direction: column;
+    background: #444;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    padding: 1rem;
+  }
+
+  .nav-links.active {
+    display: flex; /* show when toggled */
+  }
+}
